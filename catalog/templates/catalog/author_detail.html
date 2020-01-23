@@ -1,0 +1,16 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+<h3> Author Detail </h3>
+<ul>
+    <li> <p>Author first name : {{ author.first_name }} </p> </li>
+    <li> <p>Author last name : {{ author.last_name }} </li>
+    <li> <p>date of birth : {{ author.date_of_birth }}</li>
+    <li> <p>date of death : {{ author.date_of_death }}</li>
+</ul>
+
+<p><a href="{% url 'catalog:author-update' author.id %}" > Update Author detail    </a></p>
+<p><a href="{% url 'catalog:author-delete' author.id %}" > Delete this Author  </a></p>
+
+
+{% endblock %}

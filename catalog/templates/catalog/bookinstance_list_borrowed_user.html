@@ -9,6 +9,7 @@
             <a href="{% url 'catalog:book-detail' bookinst.book.pk %}">
                 {{ bookinst.book.title }}
             </a>({{ bookinst.due_back }})
+            (<a href="{% url 'catalog:renew-book-librarian' bookinst.pk %}"> renew borrow date </a>)
         </li>
         {% endfor %}
     </ul>
